@@ -1,0 +1,13 @@
+body {
+    background-color: hotpink;
+}
+
+
+.app {
+    margin: auto;
+    width: 35%;
+    border-style: solid;
+    bordercolor: #555555;
+    padding: 0px 30px;
+
+}

@@ -1,0 +1,17 @@
+p {
+    display: inline;
+    color: blueviolet;
+}
+
+.checkAndDelete {
+margin-left: 300px
+
+}
+
+
+.todoItem {
+
+    border-style: solid;
+    border-color: #555555;
+margin-bottom: 10px;
+}
