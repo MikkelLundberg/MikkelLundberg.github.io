@@ -4,17 +4,31 @@ p {
 
 }
 
-.checkAndDelete {
-padding-left: 325px;
+.createButton{
 
+    border-radius: 25px;
+}
+
+.deleteButton{
+
+
+    border-radius: 25px;
+}
+.checkAndDelete {
     display: flex;
     justify-content: space-between;
+    margin-left: auto;
+
 }
 
 
 .todoItem {
-
     border-style: solid;
     border-color: #555555;
+    border-radius: 25px;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
 }

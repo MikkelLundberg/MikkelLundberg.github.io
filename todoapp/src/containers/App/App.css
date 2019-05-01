@@ -8,6 +8,7 @@ body {
     width: 35%;
     border-style: solid;
     bordercolor: #555555;
+    border-radius: 50px;
     padding-right: 30px;
     padding-left: 30px;
 }

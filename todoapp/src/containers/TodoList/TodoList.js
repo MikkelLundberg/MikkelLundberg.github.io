@@ -41,7 +41,7 @@ class TodoList extends Component {
                 <h1>Welcome to this TodoApp!</h1>
                 <h4>This TodoApp is made by Mikkel Lundberg</h4>
                 <div className={"todoMakers"}>
-                    <button type={"button"} onClick={this.addTodo}>Create</button>
+                    <button className={"createButton"} type={"button"} onClick={this.addTodo}>Create</button>
                     <input className={"textFelt"} type="text" onChange={this.handleChange}/>
                 </div>
                 <ul>
