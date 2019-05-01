@@ -31,7 +31,7 @@ class TodoList extends Component {
         const list = todos.filter((todo) => !(todo === name));
         this.setState({todos: list});
     }
-
+//Im very happy that i got so far :D
     render() {
 
         const list = this.state.todos.map(todo => <TodoItem key={todo} text={todo} deleteItem={this.deleteItem}/>);

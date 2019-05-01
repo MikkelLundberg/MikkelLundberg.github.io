@@ -28,11 +28,11 @@ class TodoItem extends Component {
         return (
             <li className={"todoItem"}>
                 <p>{this.props.text}</p>
-                <div className={"checkAndDelete"}>
+                <span className={"checkAndDelete"}>
                     <input className={"checkBox"} type="checkbox" value={this.state.isChecked}
                            onChange={this.handleChange}/>
                     <button className={"deleteButton"} type={"button"} onClick={this.handleDelete}>Delete</button>
-                </div>
+                </span>
             </li>
         );
     }
