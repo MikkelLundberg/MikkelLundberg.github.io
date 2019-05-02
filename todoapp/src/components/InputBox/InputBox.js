@@ -21,6 +21,7 @@ export class InputBox extends Component {
 
     render() {
         return <div className={"todoMakers"}>
+            <h2>Create a Todo here!</h2>
             <button className={"createButton"} type={"button"} onClick={this.createTodo}>Create</button>
             <input className={"textFelt"} type="text" onChange={this.handleChange}/>
         </div>;

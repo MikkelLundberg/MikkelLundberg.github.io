@@ -4,6 +4,7 @@ ul {
 
 }
 
+
 h4 {
 
     text-align: center;
@@ -18,6 +19,11 @@ h1 {
 
 }
 
+.TodoList{
+
+    width: 50%;
+}
+
 .textFelt {
 
     width: 85%;
@@ -25,8 +31,16 @@ h1 {
 
 
 .todoMakers {
-
-
+    padding-bottom: 17px;
+    margin-left: 15px;
+    margin-top: 5px;
+    width: 35%;
+    border-style: solid;
+    bordercolor: #555555;
+    border-radius: 50px;
+    padding-right: 20px;
+    padding-left: 30px;
+    border-width: 5px;;
 }
 
 

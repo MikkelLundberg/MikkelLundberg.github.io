@@ -6,7 +6,7 @@ function TodoList(props) {
     const list = props.todos.map(todo => <TodoItem id={todo.id} key={todo.id} text={todo.value}
                                                 onValueChange={props.onToggle} isChecked={todo.isChecked}/>);
     return (
-        <div>
+        <div className={"TodoList"}>
             <ul>
                 {list}
             </ul>

@@ -32,7 +32,6 @@ class App extends Component {
         const {todos} = this.state;
         const todo = todos.filter((t) => t.id === id)[0];
         todo.isChecked = !todo.isChecked;
-        debugger
         const rest = todos.filter((t) => t.id !== id);
         const newTodos = [...rest, todo];
         this.setState({todos: newTodos});
@@ -46,10 +45,13 @@ class App extends Component {
             <div className={"app"}>
                 <WelcomeText/>
                 <InputBox onClick={this.addTodo}/>
-                <TodoList key={"untickedTodos"} todos={untickedTodos} deleteItem={this.deleteItem()}
-                          onToggle={this.toggleTodo}/>
-                <TodoList key={"tickedTodos"} todos={tickedTodos} deleteItem={this.deleteItem()}
-                          onToggle={this.toggleTodo}/>
+                <div className={"todoContainer"}>
+                    <TodoList key={"untickedTodos"} todos={untickedTodos} deleteItem={this.deleteItem()}
+                              onToggle={this.toggleTodo}/>
+                    <TodoList key={"tickedTodos"} todos={tickedTodos} deleteItem={this.deleteItem()}
+                              onToggle={this.toggleTodo}/>
+                </div>
+
             </div>
 
         );
