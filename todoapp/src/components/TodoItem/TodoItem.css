@@ -4,24 +4,32 @@ p {
 
 }
 
-.createButton{
+.createButton {
 
     border-radius: 25px;
+    color: hotpink;
+    font-weight: 550;
 }
 
-.deleteButton{
+.deleteButton {
 
 
     border-radius: 25px;
+    font-weight: 550;
 }
+
 .checkAndDelete {
     display: flex;
     justify-content: space-between;
     margin-left: auto;
+    margin-right: 5px;
 
 }
 
+.checkBox {
 
+color:black
+}
 .todoItem {
     border-style: solid;
     border-color: #555555;
@@ -31,4 +39,5 @@ p {
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
+    border-width: 5px;
 }
