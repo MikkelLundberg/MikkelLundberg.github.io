@@ -5,6 +5,7 @@ body {
 
 .app {
     margin: auto;
+    margin-top: 50px;
     width: 35%;
     border-style: solid;
     bordercolor: #555555;
