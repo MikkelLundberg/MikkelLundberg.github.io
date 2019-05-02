@@ -1,33 +1,58 @@
 import React, {Component} from 'react';
 import TodoList from "../TodoList/TodoList";
 import './App.css';
+import WelcomeText from "../../components/WelcomeText/WelcomeText";
+import {InputBox} from "../../components/InputBox/InputBox";
 
 class App extends Component {
 
 
     constructor(props) {
-
         super(props);
         this.state = {
-            isChecked:false
+            todos: []
         };
-        this.handleChange = this.handleChange.bind(this);
+        this.deleteItem = this.deleteItem.bind(this);
+        this.addTodo = this.addTodo.bind(this);
+        this.toggleTodo = this.toggleTodo.bind(this);
+    }
+
+
+    deleteItem(name) {
 
     }
 
-    handleChange(event) {
-        this.setState({isChecked: !this.state.isChecked});
+    addTodo(todo) {
+        const {todos} = this.state;
+        const list = [...todos, todo];
+        this.setState({todos: list});
+    }
+
+    toggleTodo(id) {
+        const {todos} = this.state;
+        const todo = todos.filter((t) => t.id === id)[0];
+        todo.isChecked = !todo.isChecked;
+        debugger
+        const rest = todos.filter((t) => t.id !== id);
+        const newTodos = [...rest, todo];
+        this.setState({todos: newTodos});
     }
 
     render() {
+        const {todos} = this.state;
+        const untickedTodos = todos.filter((todo) => !todo.isChecked);
+        const tickedTodos = todos.filter((todo) => todo.isChecked);
         return (
             <div className={"app"}>
-
-                <TodoList/>
-
+                <WelcomeText/>
+                <InputBox onClick={this.addTodo}/>
+                <TodoList key={"untickedTodos"} todos={untickedTodos} deleteItem={this.deleteItem()}
+                          onToggle={this.toggleTodo}/>
+                <TodoList key={"tickedTodos"} todos={tickedTodos} deleteItem={this.deleteItem()}
+                          onToggle={this.toggleTodo}/>
             </div>
 
-    );
+        );
     }
 }
 
