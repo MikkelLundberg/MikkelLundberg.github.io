@@ -4,9 +4,10 @@ import './Todolist.css'
 
 function TodoList(props) {
     const list = props.todos.map(todo => <TodoItem id={todo.id} key={todo.id} text={todo.value}
-                                                onValueChange={props.onToggle} isChecked={todo.isChecked}/>);
+                                                onValueChange={props.onToggle} isChecked={todo.isChecked} />);
     return (
-        <div className={"TodoList"}>
+        <div className={props.className}>
+            <h2>{props.headliner}</h2>
             <ul>
                 {list}
             </ul>

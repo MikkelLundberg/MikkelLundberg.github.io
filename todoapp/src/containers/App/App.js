@@ -42,14 +42,26 @@ class App extends Component {
         const untickedTodos = todos.filter((todo) => !todo.isChecked);
         const tickedTodos = todos.filter((todo) => todo.isChecked);
         return (
+
             <div className={"app"}>
                 <WelcomeText/>
                 <InputBox onClick={this.addTodo}/>
+                <TodoList className={"todoMakers tickedTodos"}
+                          key={"tickedTodos"}
+                          todos={tickedTodos}
+                          headliner={"Completed Todos! :"}
+                          deleteItem={this.deleteItem()}
+                          onToggle={this.toggleTodo}/>
                 <div className={"todoContainer"}>
-                    <TodoList key={"untickedTodos"} todos={untickedTodos} deleteItem={this.deleteItem()}
-                              onToggle={this.toggleTodo}/>
-                    <TodoList key={"tickedTodos"} todos={tickedTodos} deleteItem={this.deleteItem()}
-                              onToggle={this.toggleTodo}/>
+
+
+                    <TodoList className={"todoMakers untickedTodos"}
+                              key={"untickedTodos"}
+                              todos={untickedTodos}
+                              deleteItem={this.deleteItem()}
+                              onToggle={this.toggleTodo}
+                              headliner={"Todos! :"}/>
+
                 </div>
 
             </div>
